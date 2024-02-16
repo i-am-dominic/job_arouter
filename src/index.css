@@ -33,15 +33,39 @@ header nav{
   justify-content: end;
   max-width: 1200px;
   margin: 0 auto;
+
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 header nav h1{
   margin-right: auto;
   border-bottom: 3px solid var(--primary);
+
+  @media screen and (max-width: 420px) {
+    font-size: 20px;
+  }
 }
 header nav a{
   text-decoration: none;
   padding: 6px;
   border-radius: 4px;
+
+  @media screen and (max-width: 600px) {
+    margin: 12px;
+    justify-content: space-between;
+  }
+
+  @media screen and (max-width: 420px) {
+    font-size: 14px;
+    margin: 8px;
+    justify-content: space-between;
+  }
+
+  @media screen and (max-width: 320px) {
+    display: block;
+  }
 }
 header nav a.active{
   background: var(--primary);
@@ -53,6 +77,10 @@ main{
   margin: 40px auto;
 }
 
+/* .home h2{
+  font-size: 20px;
+} */
+
 
 /* help layout */
 .help-layout nav {
@@ -61,11 +89,22 @@ main{
   gap: 30px;
   margin: 30px 0;
 }
+
+@media screen and (max-width: 320px) {
+  .help-layout > h2{
+    font-size: 20px;
+  }
+}
+
 .help-layout nav a{
   padding: 10px;
   border: 2px solid white;
   border-radius: 4px;
   text-decoration: none;
+
+  @media screen and (max-width: 600px) {
+    font-size: 12px;
+  }
 }
 .help-layout nav a:hover{
   border-color: var(--primary);
@@ -76,11 +115,23 @@ main{
 
 
 /* faq */
+@media screen and (max-width: 600px) {
+  .faq h3{
+    font-size: 15px;
+  }
+}
+
 .faq .question {
   background: rgba(0,0,0,0.2);
   padding: 5px 20px;
   border-radius: 4px;
   margin: 20px 0;
+
+  @media screen and (max-width: 600px) {
+    p{
+      font-size: 14px;
+    }
+  }
 }
 
 /* contact form */
@@ -96,6 +147,7 @@ form input, form textarea {
   border-radius: 4px;
   border: 0;
   width: 300px;
+  max-width: 100%;
   color: var(--secondary);
 }
 form label span {
